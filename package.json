@@ -1,0 +1,26 @@
+{
+  "name": "eat-the-burger-app",
+  "version": "1.0.0",
+  "description": "This app is a burger logger made with MySQL, Node, Express, Handlebars and ORM. It follows the MVC design pattern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshrehanek/eat-the-burger-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshrehanek/eat-the-burger-app/issues"
+  },
+  "homepage": "https://github.com/joshrehanek/eat-the-burger-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1",
+    "util": "^0.12.3"
+  }
+}
