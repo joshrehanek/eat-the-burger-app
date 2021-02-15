@@ -3,4 +3,4 @@ const burger = require('../models/burger');
 
 //create router for app 
 
-module.exports = router;
+module.exports = routes;
