@@ -1,10 +1,10 @@
 $(function() {
     $(".devoured").on("click", function(event) {
         console.log("clicked")
-      let id = $(this).data("id");
-      let eatBurger = $(this).data("devoured");
+      const id = $(this).data("id");
+      const eatBurger = $(this).data("devoured");
   
-      var burgerDevoured = {
+      const burgerDevoured = {
         devoured: eatBurger
       };
   
@@ -21,13 +21,16 @@ $(function() {
       );
     });
   
-    $(".create-form").on("submit", function(event) {
+    $(".createBurger").on("click", function(event) {
+        console.log("clicked");
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       var newBurger = {
-        name: $("#newBurger").val().trim()
+        burger_name: $("#newBurger").val().trim(),
+        devoured: 0
       };
+      console.log(newBurger);
   
       // Send the POST request.
       $.ajax("/api/burgers", {
