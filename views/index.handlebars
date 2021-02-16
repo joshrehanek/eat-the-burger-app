@@ -4,14 +4,22 @@
 
 <ul>
   {{#each burgers}}
-  	<li>
-  	   {{!-- <p>ID: {{this.id}}</p>
-       <p>Wish: {{this.wish}}</p> --}}
-  	</li>
+  	   <p>{{this.id}}</p>
+       <p>{{this.burger_name}}</p>
   {{/each}}
 </ul>
 
-<div>
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<h3>Add Mo Burgers</h3>
+<div class="create-form">
   <form action="/" method="POST">
   	<textarea type="text" name="burger_name"></textarea>
 
