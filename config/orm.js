@@ -28,14 +28,14 @@ const orm = {
     },
     //Dane Shrewsberry helped me with this function
     insertOne: function (table, cols, vals, cb) {
-        let queryString = `INSERT INTO ${table};`;
+        let queryString = "INSERT INTO " + table;
         queryString += ' (';
         queryString += cols.toString();
         queryString += ') ';
         queryString += 'VALUES (';
         queryString += printQuestionMarks(vals.length);
         queryString += ') ';
-        console.log(`This is the query string from insert: ${queryString}`);
+        console.log(`This is the query string from insertOne: ${queryString}`);
         connection.query(queryString, vals, function (err, result) {
             if (err) {
                 throw err;
@@ -45,13 +45,13 @@ const orm = {
     },
 
     updateOne: function (table, objColVals, condition, cb) {
-        let queryString = `UPDATE ${table};`;
+        let queryString = `UPDATE ${table}`;
 
-        queryString += 'SET';
+        queryString += ' SET ';
         queryString += objToSql(objColVals);
-        queryString += 'WHERE';
+        queryString += ' WHERE ';
         queryString += condition;
-        console.log(`This is the query string from insert: ${queryString}`);
+        console.log(`This is the query string from update: ${queryString}`);
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
