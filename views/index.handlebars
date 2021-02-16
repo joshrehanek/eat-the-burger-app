@@ -4,15 +4,17 @@
 
 <ul>
   {{#each burgers}}
-  	   <p>{{this.id}}</p>
+    {{#unless devoured}}
+  	  {{> devoured/devoured devoured=false}}
        <p>{{this.burger_name}}</p>
+    {{/unless}}
   {{/each}}
 </ul>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=true}}
+      {{> devoured/devoured devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -20,9 +22,12 @@
 
 <h3>Add Mo Burgers</h3>
 <div class="create-form">
-  <form action="/" method="POST">
-  	<textarea type="text" name="burger_name"></textarea>
 
-  	<button type="submit">Submit</button>
+  <div class="form-group">
+    <label for="newBurger">Burger Name:</label>
+    <input type="text" id="newBurger" name="burger_name">
+  </div>
+
+  	<button type="submit">ADD DAT BURGER</button>
   </form>
 </div>
