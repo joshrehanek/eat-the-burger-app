@@ -6,6 +6,7 @@ const objToSql = (ob) => {
     const arr = [];
     for (const key in ob) {
         arr.push(key + '=' + ob[key]);
+        console.log(`converted k/v pair to sql syntax : ${arr.toString()}`);
     }
     return arr.toString();
 }
@@ -28,7 +29,7 @@ const orm = {
     },
     //Dane Shrewsberry helped me with this function
     insertOne: function (table, cols, vals, cb) {
-        let queryString = "INSERT INTO " + table;
+        let queryString = `INSERT INTO ${table}`;
         queryString += ' (';
         queryString += cols.toString();
         queryString += ') ';
