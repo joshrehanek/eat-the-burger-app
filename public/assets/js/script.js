@@ -5,7 +5,7 @@ $(function() {
       const eatBurger = $(this).data("devoured");
   
       const burgerDevoured = {
-        devoured: eatBurger
+        devoured: !eatBurger
       };
   
       // Send the PUT request.
@@ -30,7 +30,6 @@ $(function() {
         burger_name: $("#newBurger").val().trim(),
         devoured: 0
       };
-      console.log(newBurger);
   
       // Send the POST request.
       $.ajax("/api/burgers", {
