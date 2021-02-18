@@ -1,14 +1,18 @@
 const mysql = require('mysql');
-const connection = mysql.createConnection({
-    host: 'localhost',
-    // Your username
-    user: 'root',
-    // Your password
-    password: 'pwhere',
-    database: 'burger_db'
-});
+let connection;
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+        host: 'localhost',
+        // Your username
+        user: 'root',
+        // Your password
+        password: 'Anime100587',
+        database: 'burgers_db'
+    });
+};
 connection.connect();
-// Setting up connection.query to use promises instead of callbacks
-// This allows us to use the async/await syntax
 
 module.exports = connection;
