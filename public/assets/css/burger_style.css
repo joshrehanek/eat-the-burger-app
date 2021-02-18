@@ -3,9 +3,42 @@
     
 }
 
-body {
+button {
+    box-shadow: 1px 2px black;
+    text-decoration-color: black;
+}
+
+ body {
     background-image: url('/assets/img/burger.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+} 
+
+h1 {
+    font-weight: bolder;
+    color: green;
+    font-size: 50px;
+}
+
+
+h3 {
+    font-weight: bolder;
+    color: red;
+}
+
+img {
+    flex: center;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.col-6 {
+    font-weight: bold;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
