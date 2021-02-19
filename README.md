@@ -33,7 +33,7 @@ it is added to the db and appears in the 'EAT ME' column
 - https://github.com/joshrehanek/eat-the-burger-app
 
 ## Full Page PNG
-- ![Full Page PNG](\assets\img\full-page.png)
+- ![Full Page PNG](./assets/img/full-page.png)
 
 ## Technologies
 - [node.js](https://nodejs.org/en//)
