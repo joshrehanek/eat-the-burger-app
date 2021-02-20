@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 let connection;
+require('dotenv').config();
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -9,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         // Your username
         user: 'root',
         // Your password
-        password: 'Anime100587',
+        password: process.env.password,
         database: 'burgers_db'
     });
 };
